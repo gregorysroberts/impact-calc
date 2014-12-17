@@ -3,49 +3,49 @@
     <p>Type of inside sales team:</p>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Inbound LDR"> Inbound LDR
+        <input type="radio" name="team" value="Inbound LDR" ng-model="user.team"> Inbound LDR
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="team" value="Outbound LDR"> Outbound LDR
+        <input type="radio" name="team" value="Outbound LDR" ng-model="user.team"> Outbound LDR
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Mixed Inbound/Outbound LDR"> Mixed Inbound/Outbound LDR
+        <input type="radio" name="team" value="Mixed Inbound/Outbound LDR" ng-model="user.team"> Mixed Inbound/Outbound LDR
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Integrated -- Lead-to-Close"> Integrated -- Lead-to-Close
+        <input type="radio" name="team" value="Integrated -- Lead-to-Close" ng-model="user.team"> Integrated -- Lead-to-Close
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Closers Only"> Closers Only
+        <input type="radio" name="team" value="Closers Only" ng-model="user.team"> Closers Only
       </labe>
     </div>
   </div>
 
   <div>
     <div class="form-group">
-      How many team members? <input type="number" name="numReps">
+      How many team members? <input type="number" name="numReps" ng-model="user.numReps">
     </div>
     <div class="form-group">
-      Average deals closed per rep per week: <input type="number" name="">
+      Average deals closed per rep per week: <input type="number" name="dealsClosed" ng-model="user.dealsClosed">
     </div>
     <div class="form-group">
-      Average deal size: <input type="number" name="">
+      Average deal size: <input type="number" name="dealSize" ng-model="user.dealSize">
     </div>
     <div class="form-group">
-      If LDR team, please indicate close rate for opportunities <input type="number" name="">
+      If LDR team, please indicate close rate for opportunities <input type="number" name="user.ldrCloseRate" ng-model="user.ldrCloseRate">
     </div>
     <div class="form-group">
-      Quota <input type="number" name="">
+      Quota <input type="number" name="quota" ng-model="user.quota">
     </div>
     <div class="form-group">
-      Percentage of reps meeting or exceeding quota <input type="number" name="">%
+      Percentage of reps meeting or exceeding quota <input type="number" name="repsAboveQuota" ng-model="user.repsAboveQuota">%
     </div>
   </div>
 
@@ -53,7 +53,7 @@
 
   <div>
     <p>Industry</p>
-    <select class="form-control">
+    <select class="form-control" ng-model="user.industry">
       <option>Tourism</option>
       <option>Food Services</option>
       <option>Railroads</option>
@@ -65,7 +65,7 @@
 
   <div>
     <p>What percentage of deals are sourced by marketing?</p>
-    <select class="form-control">
+    <select class="form-control" ng-model="user.marketingSourced">
       <option>0-25%</option>
       <option>26-50%</option>
       <option>51-75%</option>
@@ -75,7 +75,7 @@
 
   <div>
     <p>How long is your sales cycle? (days)</p>
-    <select class="form-control">
+    <select class="form-control" ng-model="salesCycle">
       <option>0-30</option>
       <option>31-50</option>
       <option>51-75</option>
@@ -87,12 +87,12 @@
     <p>Is there room to increase your volume of calls or emails?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-calls" value="yes"> Yes
+        <input type="radio" name="increase-calls" value="yes" ng-model="user.increaseCalls"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-calls" value="no"> No
+        <input type="radio" name="increase-calls" value="no" ng-model="user.increaseCalls"> No
       </label>
     </div>
   </div>
@@ -101,12 +101,12 @@
     <p>Is there room to improve the quality of leads you work on?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="improve-leads" value="yes"> Yes
+        <input type="radio" name="improve-leads" value="yes" ng-model="user.improveLeads"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="improve-leads" value="no"> No
+        <input type="radio" name="improve-leads" value="no" ng-model="user.improveLeads"> No
       </label>
     </div>
   </div>
@@ -115,12 +115,13 @@
     <p>Is there room to increase you engagement rate with customers?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-engagement" value="yes"> Yes
+        <input type="radio" name="increase-engagement" value="yes" ng-model="user.increaseEngagement
+        "> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-engagement" value="no"> No
+        <input type="radio" name="increase-engagement" value="no" ng-model="user.increaseEngagement"> No
       </label>
     </div>
   </div>
@@ -129,12 +130,12 @@
     <p>Is there room to increase your conversion rate?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-conversion" value="yes"> Yes
+        <input type="radio" name="increase-conversion" value="yes" ng-model="user.increaseConversion"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-conversion" value="no"> No
+        <input type="radio" name="increase-conversion" value="no" ng-model="user.increaseConversion"> No
       </label>
     </div>
   </div>
@@ -143,12 +144,12 @@
     <p>Is there room to increase your quota attainment?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-quota" value="yes"> Yes
+        <input type="radio" name="increase-quota" value="yes" ng-model="user.increaseQuota"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-quota" value="no"> No
+        <input type="radio" name="increase-quota" value="no" ng-model="user.increaseQuota"> No
       </label>
     </div>
   </div>
@@ -156,26 +157,60 @@
   <h2>Phase 3</h2>
 
   <div class="form-group">
-    Company Name <input type="text" name="">
+    Company Name <input type="text" name="company-name" ng-model="user.companyName">
   </div>
 
   <div>
     <p>Selling to:</p>
     <div class="radio-inline">
       <label>
-        <input type="radio" name="increase-conversion" value="B2C"> B2C
+        <input type="radio" name="increase-conversion" value="B2C" ng-model="user.sellingToType"> B2C
       </label>
     </div>
     <div class="radio-inline"> 
       <label>
-        <input type="radio" name="increase-conversion" value="B2B"> B2B
+        <input type="radio" name="increase-conversion" value="B2B" ng-model="user.sellingToType"> B2B
       </label>
     </div>
-    <select class="form-control">
+    <select class="form-control" ng-model="user.sellingToSegment">
       <option>Small Business</option>
       <option>MidMarket</option>
       <option>Enterprise</option>
     </select>
   </div>
 
+  <div>
+    Team Composition
+    <div class="form-group">
+      <input type="number" name="inbound-ldr" ng-model="user.inboundLDR"> Inbound LDR
+    </div>
+    <div class="form-group">
+      <input type="number" name="outbound-ldr" ng-model="user.outboundLDR"> Outbound LDR
+    </div>
+    <div class="form-group">
+      <input type="number" name="mixed-ldr" ng-model="user.mixedLDR"> Mixed LDR
+    </div>
+    <div class="form-group">
+      <input type="number" name="integrated" ng-model="user.integrated"> Integrated
+    </div>
+    <div class="form-group">
+      <input type="number" name="insideCloser" ng-model="user.insideCloser"> Inside Closer
+    </div>
+  </div>
+
+  <div>
+    Current Perfomance
+    <div class="form-group">
+      $<input type="number" name="performance-per-rep" ng-model="user.performance.perRep"> per rep per month
+    </div>
+    <div class="form-group">
+      <input type="number" name="performance-quota" ng-model="user.performance.quota">% quota attainment
+    </div>
+    <div class="form-group">
+      $<input type="number" name="performance-new-sales" ng-model="user.performance.sales"> new sales per year
+    </div>
+  </div>
+
 </form>
+
+<button type="button" class="btn btn-primary">Submit</button>

@@ -9,9 +9,7 @@
  */
 angular.module('calcApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $('button').on('click', function (){
+    	console.log($scope.user);
+    });
   });
