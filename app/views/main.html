@@ -87,12 +87,12 @@
     <p>Is there room to increase your volume of calls or emails?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-calls" value="yes" ng-model="user.increaseCalls"> Yes
+        <input type="radio" name="increase-calls" value="true" ng-model="user.increaseCalls"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-calls" value="no" ng-model="user.increaseCalls"> No
+        <input type="radio" name="increase-calls" value="false" ng-model="user.increaseCalls"> No
       </label>
     </div>
   </div>
@@ -101,12 +101,12 @@
     <p>Is there room to improve the quality of leads you work on?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="improve-leads" value="yes" ng-model="user.improveLeads"> Yes
+        <input type="radio" name="improve-leads" value="true" ng-model="user.improveLeads"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="improve-leads" value="no" ng-model="user.improveLeads"> No
+        <input type="radio" name="improve-leads" value="false" ng-model="user.improveLeads"> No
       </label>
     </div>
   </div>
@@ -115,13 +115,13 @@
     <p>Is there room to increase you engagement rate with customers?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-engagement" value="yes" ng-model="user.increaseEngagement
+        <input type="radio" name="increase-engagement" value="true" ng-model="user.increaseEngagement
         "> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-engagement" value="no" ng-model="user.increaseEngagement"> No
+        <input type="radio" name="increase-engagement" value="false" ng-model="user.increaseEngagement"> No
       </label>
     </div>
   </div>
@@ -130,12 +130,12 @@
     <p>Is there room to increase your conversion rate?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-conversion" value="yes" ng-model="user.increaseConversion"> Yes
+        <input type="radio" name="increase-conversion" value="true" ng-model="user.increaseConversion"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-conversion" value="no" ng-model="user.increaseConversion"> No
+        <input type="radio" name="increase-conversion" value="false" ng-model="user.increaseConversion"> No
       </label>
     </div>
   </div>
@@ -144,12 +144,12 @@
     <p>Is there room to increase your quota attainment?</p>
     <div class="radio">
       <label>
-        <input type="radio" name="increase-quota" value="yes" ng-model="user.increaseQuota"> Yes
+        <input type="radio" name="increase-quota" value="true" ng-model="user.increaseQuota"> Yes
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="increase-quota" value="no" ng-model="user.increaseQuota"> No
+        <input type="radio" name="increase-quota" value="false" ng-model="user.increaseQuota"> No
       </label>
     </div>
   </div>
@@ -213,4 +213,11 @@
 
 </form>
 
-<button type="button" class="btn btn-primary">Submit</button>
+<button type="button" class="btn btn-primary" ng-click="update(user)">Submit</button>
+
+<div>
+  Annual Revenue = {{master.annualRevenue}}
+</div>
+<div>
+  Increase = {{master.increase}}
+</div>
