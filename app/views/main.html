@@ -3,27 +3,27 @@
     <p>Type of inside sales team:</p>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Inbound LDR" ng-model="user.team"> Inbound LDR
+        <input type="radio" name="team" value="an inbound LDR" ng-model="user.team"> Inbound LDR
       </label>
     </div>
     <div class="radio"> 
       <label>
-        <input type="radio" name="team" value="Outbound LDR" ng-model="user.team"> Outbound LDR
+        <input type="radio" name="team" value="an outbound LDR" ng-model="user.team"> Outbound LDR
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Mixed Inbound/Outbound LDR" ng-model="user.team"> Mixed Inbound/Outbound LDR
+        <input type="radio" name="team" value="a mixed LDR" ng-model="user.team"> Mixed Inbound/Outbound LDR
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Integrated -- Lead-to-Close" ng-model="user.team"> Integrated -- Lead-to-Close
+        <input type="radio" name="team" value="an integrated inside sales" ng-model="user.team"> Integrated -- Lead-to-Close
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="team" value="Closers Only" ng-model="user.team"> Closers Only
+        <input type="radio" name="team" value="a closers only" ng-model="user.team"> Closers Only
       </labe>
     </div>
   </div>
@@ -215,6 +215,12 @@
 
 <button type="button" class="btn btn-primary" ng-click="update(user)">Submit</button>
 
+<div>
+  As {{master.team}} team, your main focus is {{master.focus}}
+</div>
+<div>
+  In this role {{master.indicators}} are the most important leading indicators of success.
+</div>
 <div>
   Annual Revenue = {{master.annualRevenue}}
 </div>
